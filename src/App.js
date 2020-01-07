@@ -16,7 +16,7 @@ class App extends React.Component {
     earnedScore: 0
   };
   getQuestions = async (diffuciulty, category) => {
-    let url = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${diffuciulty}&type=multiple`;
+    let url = `http://opentdb.com/api.php?amount=10&category=${category}&difficulty=${diffuciulty}&type=multiple`;
     let data = await fetch(url);
     let questionsData = await data.json();
     questionsData.results.map(result => {
